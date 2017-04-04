@@ -1,0 +1,36 @@
+<h1>New todolist </h1>
+
+ <% if @todolist.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@todolist.errors.count, "error") %> prohibited
+        this todolist from being saved:
+      </h2>
+      <ul>
+        <% @todolist.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%=form_for :todolist, url: todolists_path do |f|%>
+  <p>
+  	<%= f.label :title%><br>
+  	<%= f.text_field :title %>
+  </p>
+
+  <p>
+  	<%= f.label :description%><br>
+  	<%= f.text_area :description %>
+  </p>
+
+  <p>
+  	<%= f.submit%>
+  	
+  </p>
+
+
+
+
+<% end %>

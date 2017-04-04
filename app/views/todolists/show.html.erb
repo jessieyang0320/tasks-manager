@@ -1,0 +1,18 @@
+<h1>show todolist</h1>
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @todolist.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @todolist.description %>
+</p>
+
+<%= link_to 'edit', edit_todolist_path(@todolist) %>
+<%= link_to 'delete', todolist_path(@todolist),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+<%= link_to 'back', todolists_path%>
