@@ -1,0 +1,8 @@
+<p>
+  	<strong> Item:</strong>
+  	<%=item.content%>
+ </p>
+
+ <%= link_to 'delete item',[item.todolist,item],
+              method: :delete,
+              data: { confirm: 'Are you sure?'} %>
