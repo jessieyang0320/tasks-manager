@@ -1,30 +1,23 @@
-<h1>show todolist</h1>
-<p>
-  <strong>Title:</strong>
-  <%= @todolist.title %>
-</p>
- 
-<p>
-  <strong>Description:</strong>
-  <%= @todolist.description %>
-</p>
+<p id="notice"><%= notice %></p>
+<h2 class="todo_list_title"><%= @todolist.title %></h2>
+<p class="todo_list_sub_title"><%= @todolist.description %></p>
+
 
 <div id="todo_items_wrapper">
-  <h2>Todo Items</h2>
+ 
  
     <%= render @todolist.items%>
  
-
-  <h2>Add a new item</h2>
     <div id="form">
       <%=render 'items/form'%>
     </div>
 </div>
 
 
-
-<%= link_to 'edit', edit_todolist_path(@todolist) %>
-<%= link_to 'delete', todolist_path(@todolist),
+<div class="links">
+  <%= link_to 'Edit', edit_todolist_path(@todolist) %>|
+  <%= link_to 'Delete', todolist_path(@todolist),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-<%= link_to 'back', todolists_path%>
+              data: { confirm: 'Are you sure?' } %>|
+  <%= link_to 'Back', todolists_path%>
+</div>
