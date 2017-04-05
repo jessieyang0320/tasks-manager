@@ -1,24 +1,6 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+With tasks manager, users can create/delete/edit his/her to do list
+Clock: vanilla javascript 
+main focus: practice CSS without Bootstrap framework 
+Back-end: Ruby on Rails 
+Front-end: CSS, HTML, JavaScript
