@@ -1,0 +1,30 @@
+<h1>show todolist</h1>
+<p>
+  <strong>Title:</strong>
+  <%= @todolist.title %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @todolist.description %>
+</p>
+
+<div id="todo_items_wrapper">
+  <h2>Todo Items</h2>
+ 
+    <%= render @todolist.items%>
+ 
+
+  <h2>Add a new item</h2>
+    <div id="form">
+      <%=render 'items/form'%>
+    </div>
+</div>
+
+
+
+<%= link_to 'edit', edit_todolist_path(@todolist) %>
+<%= link_to 'delete', todolist_path(@todolist),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+<%= link_to 'back', todolists_path%>

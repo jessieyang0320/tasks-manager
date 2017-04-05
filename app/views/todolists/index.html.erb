@@ -1,0 +1,21 @@
+<h1>This is todolist index page</h1>
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @todolists.each do |todolist| %>
+    <tr>
+      <td><%= todolist.title %></td>
+      <td><%= todolist.description %></td>
+      <td><%= link_to 'Show', todolist_path(todolist) %></td>
+      <td><%= link_to 'edit', edit_todolist_path(todolist) %></td>
+      <td><%= link_to 'delete', todolist_path(todolist),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
