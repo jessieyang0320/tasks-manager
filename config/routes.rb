@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 root to: 'todolists#index'
 
 resources :todolists do 
-	resources :items
+	resources :items do 
+		member do 
+			patch :complete
+		end 
+	end 
 end 
  
 end
